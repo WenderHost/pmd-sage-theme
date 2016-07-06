@@ -1,0 +1,49 @@
+.home{
+	.jumbotron.withbackground{
+		/* Box-model */
+		height: 600px;
+		margin-bottom: 0;
+
+		/* Visual */
+		background-color: lighten($brand-primary,50%);
+		background-image: url(../images/feature.01.1920x800.jpg);
+		background-size: cover;
+	}
+
+	.jumbotron-content{
+		/* Position */
+		margin: 70px auto 0 auto;
+
+		/* Box-model */
+		max-width: 700px;
+		padding: 10px 20px 20px 20px;
+
+		/* Typography */
+		text-align: center;
+
+		/* Visual */
+		background-color: rgba(255,255,255,.95);
+		border-radius: 3px;
+		box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
+
+		color: darken($brand-tertiary,35%);
+	}
+	.jumbotron-content p{
+		font-size: 1.25em;
+	}
+	.jumbotron form{
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	.jumbotron-title.logo{
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 500px;
+
+	}
+
+	.navbar{
+		margin-bottom: 0;
+	}
+}
