@@ -1,1 +1,16 @@
+.logo{
+	display: block;
+	text-indent: -9999px;
+	background: transparent url(../images/logo.1505x180.png) no-repeat;
+	background-size: contain;
+}
+.ribbon{
+	background-color: $brand-primary;
+	color: #fff;
+	text-align: center;
 
+	p.lead{
+		font-weight: 500;
+		font-size: 32px;
+	}
+}
