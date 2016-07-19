@@ -19,6 +19,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "stats.js": {
+      "files": [
+        "scripts/stats.js"
+      ]
     }
   },
   "config": {

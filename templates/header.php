@@ -40,7 +40,7 @@ if( is_front_page() ){ ?>
   <div class="container ribbon">
     <div class="row">
       <div class="col-md-12">
-        <p class="lead">$71,248,000 in donations collected for local non-profits.</p>
+        <p class="lead" id="stats-since">Loading stats...</p>
       </div>
     </div>
   </div>
