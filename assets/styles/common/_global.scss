@@ -9,8 +9,17 @@
 	color: #fff;
 	text-align: center;
 
+	&.jumbotron{
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
 	p.lead{
 		font-weight: 500;
 		font-size: 32px;
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
 	}
 }
