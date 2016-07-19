@@ -1,0 +1,13 @@
+// Styling for SVG assets
+div.svg.circle{
+	margin: 0 auto;
+
+	width: 200px;
+	height: 200px;
+
+	background-color: $brand-primary;
+	padding: 35px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	fill: #fff;
+}
