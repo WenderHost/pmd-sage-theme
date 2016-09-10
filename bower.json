@@ -7,7 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "countUp.js": "^1.7.1",
+    "waypoints": "^4.0.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -30,6 +32,12 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "waypoints": {
+      "main": [
+        "./lib/jquery.waypoints.js",
+        "./lib/shortcuts/sticky.js"
       ]
     }
   }
