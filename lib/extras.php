@@ -40,3 +40,12 @@ function google_fonts(){
   wp_enqueue_style( 'google-fonts' );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\google_fonts' );
+
+/**
+ * Get estimated reading time
+ */
+function reading_time($text){
+    $words = str_word_count(strip_tags($text));
+    $min = ceil($words / 200);
+    return $min . ' min read';
+}
