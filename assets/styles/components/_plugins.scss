@@ -1,0 +1,85 @@
+/* Donation Manager
+------------------------*/
+/* Donation Manager pages
+---------------------------------*/
+$donation-page-width: 600px;
+.select-your-organization{
+	margin-bottom: 40px;
+}
+
+.select-your-organization,
+.step-one,
+.step-two,
+.step-three,
+.step-four,
+.thank-you{
+	/* Customize container */
+	@media(min-width: 768px){
+		main.main{
+			max-width: $donation-page-width;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 60px;
+
+			.container{
+				max-width: $donation-page-width;
+			}
+		}
+	}
+
+	.btn{
+		display: block;
+		margin-top: 30px;
+		clear: both;
+		max-width: 300px;
+
+	}
+
+	.row.ads{
+		margin-bottom: 30px;
+
+		.col-xs-4:only-of-type{
+			float: none;
+			margin: 0 auto;
+		}
+		.col-xs-4:first-child:nth-last-child(2),
+		.col-xs-4:first-child:nth-last-child(2) ~ li{
+			margin-left: 17%;
+		}
+	}
+}
+
+.step-two{
+	.page-header{
+		border: none;
+		margin-bottom: 0;
+	}
+}
+
+.priority-row{
+	display: none;
+}
+.priority-close{
+	position: absolute;
+	right: 28px;
+	top: -16px;
+}
+.row.organization{
+	.btn-lg{
+		font-size: .9em;
+	}
+
+	&:last-of-type + hr{
+		display: none;
+	}
+}
+.row.organization.priority{
+	/*border-top: 1px solid #eee;
+	padding-top: 30px;*/
+
+
+	.btn-lg{
+		font-size: 1.1em;
+	}
+}
