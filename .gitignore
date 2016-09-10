@@ -7,3 +7,4 @@ npm-debug.log
 vendor
 *.sublime-*
 assets/svg/originals/*.*
+composer.lock
