@@ -4,6 +4,21 @@
 	background: transparent url(../images/logo.1505x180.png) no-repeat;
 	background-size: contain;
 }
+
+.wrap.container{
+	margin-bottom: 40px;
+}
+
+.nomargin{
+	margin-bottom: 0;
+}
+
+.page-header{
+	margin-top: 20px;
+}
+
+/* Jumbotrons
+ -------------------------------------- */
 .ribbon{
 	background-color: $brand-primary;
 	color: #fff;
