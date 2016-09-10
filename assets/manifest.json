@@ -23,7 +23,8 @@
     "stats.js": {
       "files": [
         "scripts/stats.js"
-      ]
+      ],
+      "bower": ["waypoints","countUp.js"]
     }
   },
   "config": {
