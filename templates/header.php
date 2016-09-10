@@ -26,21 +26,21 @@
 <?php
 if( is_front_page() ){ ?>
 <div class="jumbotron withbackground">
+  <div class="jumbotron-overlay"></div>
   <div class="container">
     <div class="jumbotron-content">
       <h1 class="jumbotron-title logo">PickUpMyDonation.com</h1>
       <h3>Schedule your donation pick up:</h3>
       <?= do_shortcode( '[donationform nextpage="select-your-organization" form="0"]' ); ?>
-      <p><em>Thank you for choosing PickUpMyDonation.com for your donation needs!</em></p>
-      <p><em>In a few simple steps, we will have your request in our system.<br />Get the process started by entering your Zip Code in the form above.</em></p>
+      <p><em>Thank you for choosing PickUpMyDonation.com for your donation needs!<br /><br />In a few simple steps, we will have your request in our system.<br />Get the process started by entering your Zip Code in the form above.</em></p>
     </div>
   </div>
 </div>
 <div class="jumbotron ribbon">
-  <div class="container ribbon">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <p class="lead" id="stats-since">Loading stats...</p>
+        <p class="lead" id="stats-since">Since 2012, <span class="counter" id="total-donations"></span> donations submitted valued at <span class="counter" id="total-donations-value"></span>.</p>
       </div>
     </div>
   </div>
