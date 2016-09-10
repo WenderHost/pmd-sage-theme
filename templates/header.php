@@ -13,10 +13,10 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
           <?php
           if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new wp_bootstrap_navwalker()]);
           endif;
           ?>
       </div><!-- /.navbar-collapse -->
