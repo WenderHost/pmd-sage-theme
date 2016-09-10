@@ -38,3 +38,67 @@
 		}
 	}
 }
+
+.jumbotron{
+	&.brand-primary{
+		background-color: lighten($brand-primary,50%);
+	}
+	&.brand-secondary{
+		background-color: $brand-secondary;
+		color: #fff;
+
+		.stat{
+			background-color: #fff;
+			color: $brand-primary;
+		}
+	}
+	&.jumbotron-cta{
+		.btn-lg{
+			font-size: 36px;
+		}
+
+		.row{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/* Stats
+ -------------------------------------- */
+ $stat-size: 200px;
+ .stat{
+ 	display: table;
+ 	overflow: hidden;
+
+	.stat-inner{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.caption{
+		font-size: 16px;
+		margin-top: -6px;
+	}
+
+ 	background: $brand-primary;
+ 	color: #fff;
+ 	font-weight: bold;
+ 	font-size: 48px;
+ 	text-align: center;
+ 	width: $stat-size;
+ 	height: $stat-size;
+ 	white-space: nowrap;
+ 	margin: 0 auto;
+
+ 	&.circle{
+ 		border-radius: 50%;
+ 	}
+
+ 	&.sml{
+ 		font-size: 32px;
+ 	}
+ }
