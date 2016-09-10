@@ -1,24 +1,20 @@
 <!-- front-page-body.php -->
-<div class="container">
+<div class="container" id="partner-cta">
 	<div class="row">
 		<div class="col-md-4">
 			<div class="svg circle"><?php get_template_part( 'assets/svg/inline', 'box.svg' ); ?></div>
 			<h3 class="text-center">Donate Your Stuff</h3>
-			<p>Since 2012, PickUpMyDonation.com has been helping you donate your stuff to organizations in your area. Our easy-to-use website, helps you quickly get in touch with donation pick up providers in your area.</p>
+			<p>Since 2012, PickUpMyDonation.com has been helping you donate your stuff to organizations in your area. After entering your zip code, our step-by-step tool establishes the minimum criteria for a donation pick up. Then we send your donation request to your selected pick up provider(s).</p>
 		</div>
 		<div class="col-md-4">
-			<div class="svg circle"><?php get_template_part( 'assets/svg/inline', 'increasing.svg' ); ?></div>
-			<h3 class="text-center">Increase Donations</h3>
-			<p>Are you looking to increase donation pick ups for your organization? Consider these stats:</p>
-			<ul>
-				<li>Last month: <span id="donations-last-month"></span> donations submitted valued at <span id="donations-last-month-value"></span>.</li>
-				<li>This year: <span id="donations-this-year"></span> donations submitted valued at <span id="donations-this-year-value"></span>.</li>
-			</ul>
+			<div class="svg circle"><?php get_template_part( 'assets/svg/inline', 'thumbs-up.svg' ); ?></div>
+			<h3 class="text-center">Support Local Organizations</h3>
+			<p>The heart of what we do is connect you to organizations providing donation pick up in your area. Donations are the life-blood of the local organizations in your community. Our tool makes it quick and easy to find someone to pick up your donation.</p>
 		</div>
 		<div class="col-md-4">
 			<div class="svg circle"><?php get_template_part( 'assets/svg/inline', 'checkmark.svg' ); ?></div>
-			<h3 class="text-center">Claim Your Market</h3>
-			<p>Here's a list of our top performing zip codes without an exclusive partner. If your organization provides donaiton pickups in these zip codes, sign up as an exclusive pick up provider to receive all referrals for your zip code(s).</p>
+			<h3 class="text-center">Make a Difference</h3>
+			<p>By partnering with local organizations, PickUpMyDonation.com connects your donations with organizations who are making a difference in your community. <em>Where you donate makes a difference.</em> We work to make sure your donations have a local impact.</p>
 		</div>
 	</div>
 </div>
