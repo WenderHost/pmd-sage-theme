@@ -1,8 +1,11 @@
+/* Home
+---------------------------------*/
 .home{
 	.jumbotron.withbackground{
 		/* Box-model */
 		height: 600px;
 		margin-bottom: 0;
+		position: relative;
 
 		/* Visual */
 		background-color: lighten($brand-primary,50%);
@@ -10,12 +13,31 @@
 		background-size: cover;
 	}
 
+	.jumbotron-overlay{
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		height: 600px;
+		width: 100%;
+		padding: 10px 20px 20px 20px;
+		background-color: rgba(0,0,0,.25);
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1081c4+0,1081c4+100&0.1+0,0.75+100 */
+		background: -moz-linear-gradient(top,  rgba(16,129,196,0.1) 0%, rgba(16,129,196,0.75) 100%);
+		background: -webkit-linear-gradient(top,  rgba(16,129,196,0.1) 0%,rgba(16,129,196,0.75) 100%);
+		background: linear-gradient(to bottom,  rgba(16,129,196,0.1) 0%,rgba(16,129,196,0.75) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1081c4', endColorstr='#bf1081c4',GradientType=0 ); /* IE6-9 */
+
+
+	}
+
 	.jumbotron-content{
 		/* Position */
-		margin: 70px auto 0 auto;
+		margin: 30px auto 0 auto;
+		z-index: 30;
+		position: relative;
 
 		/* Box-model */
-		max-width: 700px;
+		max-width: 740px;
 		padding: 10px 20px 20px 20px;
 
 		/* Typography */
@@ -27,10 +49,12 @@
 		box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
 
 		color: darken($brand-tertiary,35%);
+
+		p{
+			font-size: 1.25em;
+		}
 	}
-	.jumbotron-content p{
-		font-size: 1.25em;
-	}
+
 	.jumbotron form{
 		margin-top: 20px;
 		margin-bottom: 40px;
@@ -45,5 +69,14 @@
 
 	.navbar{
 		margin-bottom: 0;
+	}
+
+	#stats-since{
+		.counter{
+			background-color: lighten($brand-primary, 5%);
+			border-radius: 4px;
+			padding: 0 8px;
+			font-weight: bold;
+		}
 	}
 }
