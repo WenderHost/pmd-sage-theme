@@ -1,4 +1,10 @@
 footer{
+	font-size: 12px;
+
+	.copyright{
+		text-align: right;
+	}
+
 	.ribbon.jumbotron{
 		/* Positioning */
 
@@ -10,5 +16,29 @@ footer{
 
 		/* Visual */
 
+	}
+
+	ul.menu{
+		padding-left: 0;
+
+		li{
+			list-style-type: disc;
+			float: left;
+		 	text-indent: -5px;
+			margin-left: 20px;
+
+			&:first-child{
+				list-style-type: none;
+				margin-left: 0;
+			}
+
+			a{
+				color: #fff;
+			}
+
+			&:after{
+				content: '';
+			}
+		}
 	}
 }
