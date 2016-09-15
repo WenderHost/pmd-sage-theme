@@ -49,3 +49,15 @@ function reading_time($text){
     $min = ceil($words / 200);
     return $min . ' min read';
 }
+
+/**
+ * Add wp_query var for searching via page title
+ */
+function seo_pages_where( $where, &$wp_query ){
+  global $wpdb;
+  if( $seo_page_title = $wp_query->get( 'seo_page_title' ) ){
+    $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( $wpdb->esc_like( $seo_page_title ) ) . '%\'';
+  }
+  return $where;
+}
+add_filter( 'posts_where', __NAMESPACE__ . '\\seo_pages_where', 10, 2 );
