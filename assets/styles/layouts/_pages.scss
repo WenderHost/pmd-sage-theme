@@ -1,9 +1,10 @@
 /* Home
 ---------------------------------*/
+$jumbotron_h: 450px;
 .home{
 	.jumbotron.withbackground{
 		/* Box-model */
-		height: 600px;
+		height: $jumbotron_h;
 		margin-bottom: 0;
 		position: relative;
 
@@ -17,7 +18,7 @@
 		position: absolute;
 		z-index: 0;
 		top: 0;
-		height: 600px;
+		height: $jumbotron_h;
 		width: 100%;
 		padding: 10px 20px 20px 20px;
 		background-color: rgba(0,0,0,.25);
@@ -32,13 +33,13 @@
 
 	.jumbotron-content{
 		/* Position */
-		margin: 30px auto 0 auto;
+		margin: 88px auto 0 auto;
 		z-index: 30;
 		position: relative;
 
 		/* Box-model */
-		max-width: 740px;
-		padding: 10px 20px 20px 20px;
+		max-width: 500px;
+		padding: 10px;
 
 		/* Typography */
 		text-align: center;
