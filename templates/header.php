@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img width="32" height="32" title="" alt="" src="<?= get_template_directory_uri() ?>/dist/images/icon.256x256.png" /></a>
+        <a class="navbar-brand" href="/"><img height="32" title="" alt="" src="<?= get_template_directory_uri() ?>/dist/images/logo.837x100.png" /></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
