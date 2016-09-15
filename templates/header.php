@@ -29,10 +29,8 @@ if( is_front_page() ){ ?>
   <div class="jumbotron-overlay"></div>
   <div class="container">
     <div class="jumbotron-content">
-      <h1 class="jumbotron-title logo">PickUpMyDonation.com</h1>
       <h3>Schedule your donation pick up:</h3>
       <?= do_shortcode( '[donationform nextpage="select-your-organization" form="0"]' ); ?>
-      <p><em>Thank you for choosing PickUpMyDonation.com for your donation needs!<br /><br />In a few simple steps, we will have your request in our system.<br />Get the process started by entering your Zip Code in the form above.</em></p>
     </div>
   </div>
 </div>
