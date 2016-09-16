@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
           <?php
           if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new wp_bootstrap_navwalker()]);
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new Roots\Sage\Navwalker\BootstrapNavwalker()]);
           endif;
           ?>
       </div><!-- /.navbar-collapse -->
@@ -24,13 +24,13 @@
   </nav>
 </header>
 <?php
-if( is_front_page() ){ ?>
+if (is_front_page()) { ?>
 <div class="jumbotron withbackground">
   <div class="jumbotron-overlay"></div>
   <div class="container">
     <div class="jumbotron-content">
       <h3>Schedule your donation pick up:</h3>
-      <?= do_shortcode( '[donationform nextpage="select-your-organization" form="0"]' ); ?>
+      <?= do_shortcode('[donationform nextpage="select-your-organization" form="0"]'); ?>
     </div>
   </div>
 </div>

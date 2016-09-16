@@ -17,7 +17,7 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-      $container_class = ( is_single() )? 'container-fluid' : 'container';
+      $container_class = ( is_single() ) ? 'container-fluid' : 'container';
     ?>
     <div class="wrap <?= $container_class ?>" role="document">
       <div class="content row">

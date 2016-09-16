@@ -36,7 +36,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
-  add_image_size( 'feature-thumbnail', 512, 512, true );
+  add_image_size('feature-thumbnail', 512, 512, true);
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -108,9 +108,9 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
-  if(is_front_page()) {
-    wp_enqueue_script( 'donation/stats', Assets\asset_path('scripts/stats.js'), ['jquery'], null, true );
-    wp_localize_script( 'donation/stats', 'wpvars', array( 'dataurl' => 'https://www.pickupmydonation.com/wp-content/plugins/donation-manager/stats.json' ) );
+  if (is_front_page()) {
+    wp_enqueue_script('donation/stats', Assets\asset_path('scripts/stats.js'), ['jquery'], null, true);
+    wp_localize_script('donation/stats', 'wpvars', array('dataurl' => 'https://www.pickupmydonation.com/wp-content/plugins/donation-manager/stats.json'));
   }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
