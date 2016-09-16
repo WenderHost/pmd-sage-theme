@@ -229,6 +229,21 @@ gulp.task('svgs', function(){
     .pipe(browserSync.stream());
 });
 
+// ### Package
+// `gulp package` - Copy production files to /package/pmd-sage-theme/.
+gulp.task('package', function(){
+  return gulp.src([
+    './*.php',
+    './*.css',
+    './*.md',
+    './screenshot.png',
+    './dist/',
+    './donation-manager-templates/',
+    './templates/'])
+    .pipe(gulp.dest('./package/pmd-sage-theme/'))
+    .pipe(browserSync.stream());
+});
+
 // ### JSHint
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {

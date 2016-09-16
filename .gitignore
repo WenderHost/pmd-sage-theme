@@ -9,3 +9,4 @@ vendor
 assets/svg/originals/*.*
 composer.lock
 donation-manager-templates/compiled/
+package/
