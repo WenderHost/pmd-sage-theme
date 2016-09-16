@@ -221,6 +221,14 @@ gulp.task('images', function() {
     .pipe(browserSync.stream());
 });
 
+// ### SVGs
+// `gulp svgs` - Copy svgs from assets/ to dist/.
+gulp.task('svgs', function(){
+  return gulp.src('./assets/svg/*.php')
+    .pipe(gulp.dest(path.dist + 'svg'))
+    .pipe(browserSync.stream());
+});
+
 // ### JSHint
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
