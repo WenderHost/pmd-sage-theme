@@ -1,6 +1,11 @@
+# [PMD Sage Theme](https://www.pickupmydonation.com/)
+[![Build Status](https://api.travis-ci.org/WenderHost/pmd-sage-theme.svg)](https://travis-ci.org/WenderHost/pmd-sage-theme)
+
+The PMD Sage Theme is a WordPress theme based on [Sage](https://roots.io/sage/).
+
+---
+
 # [Sage](https://roots.io/sage/)
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
