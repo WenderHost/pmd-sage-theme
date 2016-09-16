@@ -236,6 +236,7 @@ gulp.task('package', function(){
     './*.php',
     './*.css',
     './*.md',
+    './lib/',
     './screenshot.png',
     './dist/',
     './donation-manager-templates/',
