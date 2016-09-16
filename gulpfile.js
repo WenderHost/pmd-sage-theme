@@ -236,11 +236,11 @@ gulp.task('package', function(){
     './*.php',
     './*.css',
     './*.md',
-    './lib/',
+    './lib/**/*',
     './screenshot.png',
-    './dist/',
-    './donation-manager-templates/',
-    './templates/'])
+    './dist/**/*',
+    './donation-manager-templates/**/*',
+    './templates/**/*'], {base:"."})
     .pipe(gulp.dest('./package/pmd-sage-theme/'))
     .pipe(browserSync.stream());
 });
