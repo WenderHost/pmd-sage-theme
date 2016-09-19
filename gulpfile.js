@@ -5,6 +5,7 @@ var browserSync  = require('browser-sync').create();
 var changed      = require('gulp-changed');
 var concat       = require('gulp-concat');
 var flatten      = require('gulp-flatten');
+var git          = require('git-rev-sync');
 var gulp         = require('gulp');
 var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
@@ -15,10 +16,17 @@ var merge        = require('merge-stream');
 var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
+var replace      = require('gulp-replace');
 var runSequence  = require('run-sequence');
+var rmdir        = require('rimraf');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var json         = require('json-file');
+var zip          = require('gulp-zip');
+
+var themeDirName = json.read('./package.json').get('themeDirName');
+var themeDir = './package/' + themeDirName;
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -230,19 +238,29 @@ gulp.task('svgs', function(){
 });
 
 // ### Package
-// `gulp package` - Copy production files to /package/pmd-sage-theme/.
-gulp.task('package', function(){
+// `gulp package` - Packages files into WordPress production ready theme.
+gulp.task('package', function(callback){
+  runSequence('clean-package',
+    'copy-theme',
+    'update-package-meta',
+    'zip-theme',
+    callback);
+});
+
+// ### Copy Theme
+// `gulp copy-theme` - Copies production files to package directory.
+gulp.task('copy-theme', function(){
   return gulp.src([
     './*.php',
     './*.css',
+    '!./style.css',
     './*.md',
     './lib/**/*',
     './screenshot.png',
     './dist/**/*',
     './donation-manager-templates/**/*',
     './templates/**/*'], {base:"."})
-    .pipe(gulp.dest('./package/pmd-sage-theme/'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(themeDir));
 });
 
 // ### JSHint
@@ -259,6 +277,22 @@ gulp.task('jshint', function() {
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
 gulp.task('clean', require('del').bind(null, [path.dist]));
+
+// ### Clean
+// `gulp clean-package` - Deletes the packaged theme.
+gulp.task('clean-package', function(){
+  rmdir('./package',function(error){});
+});
+
+// ### Update Package Meta
+// `gulp update-package-meta` - Updates the WordPress theme description with the latest commit information.
+gulp.task('update-package-meta', function(){
+  var latest_commit = git.short() + ' - ' + git.message();
+  console.log('Latest commit: ' + latest_commit);
+  return gulp.src(['./style.css'])
+    .pipe(replace('{latest_commit}', latest_commit))
+    .pipe(gulp.dest(themeDir));
+});
 
 // ### Watch
 // `gulp watch` - Use BrowserSync to proxy your dev server and synchronize code
@@ -303,6 +337,14 @@ gulp.task('wiredep', function() {
       hasChanged: changed.compareSha1Digest
     }))
     .pipe(gulp.dest(path.source + 'styles'));
+});
+
+// ### Zip Theme
+// `gulp zip-theme` - Archive production theme files
+gulp.task('zip-theme',function(){
+  return gulp.src(themeDir + '/*')
+    .pipe(zip(themeDirName + '.zip'))
+    .pipe(gulp.dest('./package'));
 });
 
 // ### Gulp
