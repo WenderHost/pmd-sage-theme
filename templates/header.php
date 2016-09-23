@@ -16,31 +16,10 @@
       <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
           <?php
           if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new Roots\Sage\Navwalker\BootstrapNavwalker()]);
+              wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new Roots\Sage\Navwalker\BootstrapNavwalker()]);
           endif;
-          ?>
+            ?>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 </header>
-<?php
-if (is_front_page()) { ?>
-<div class="jumbotron withbackground">
-  <div class="jumbotron-overlay"></div>
-  <div class="container">
-    <div class="jumbotron-content">
-      <h3>Schedule your donation pick up:</h3>
-      <?= do_shortcode('[donationform nextpage="select-your-organization" form="0"]'); ?>
-    </div>
-  </div>
-</div>
-<div class="jumbotron ribbon">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead" id="stats-since">Since 2012, <span class="counter" id="total-donations"></span> donations submitted valued at <span class="counter" id="total-donations-value"></span>.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<?php } ?>
