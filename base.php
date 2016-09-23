@@ -7,7 +7,7 @@ use Roots\Sage\Wrapper;
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
-  <?php get_template_part('templates/head'); ?>
+    <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
     <!--[if IE]>
       <div class="alert alert-warning">
@@ -17,12 +17,14 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-      $container_class = ( is_single() ) ? 'container-fluid' : 'container';
+      $full_width_pages = [];
+      global $post;
+      $container_class = ( is_single() || is_front_page() || in_array($post->post_name, $full_width_pages) ) ? 'container-fluid' : 'container';
     ?>
     <div class="wrap <?= $container_class ?>" role="document">
       <div class="content row">
         <main class="main">
-          <?php include Wrapper\template_path(); ?>
+            <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">
