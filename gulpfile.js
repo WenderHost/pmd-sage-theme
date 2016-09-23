@@ -342,7 +342,7 @@ gulp.task('wiredep', function() {
 // ### Zip Theme
 // `gulp zip-theme` - Archive production theme files
 gulp.task('zip-theme',function(){
-  return gulp.src(themeDir + '/*')
+  return gulp.src(themeDir + '/**/*')
     .pipe(zip(themeDirName + '.zip'))
     .pipe(gulp.dest('./package'));
 });
