@@ -4,7 +4,7 @@
 		<div class="col-md-4">
 			<div class="svg circle"><?php get_template_part('dist/svg/inline', 'box.svg'); ?></div>
             <h3 class="text-center">Donate Your Stuff</h3>
-            <p>Since 2012, we've been focused on making large item donations simple. Use our online donation request platform to get your request to your local non-profit in around 2 minutes.</p>
+            <p>Since 2012, we've been focused on making large item donations simple. Use our online donation request platform to get your request to your local non-profit within just a few minutes.</p>
         </div>
         <div class="col-md-4">
             <div class="svg circle"><?php get_template_part('dist/svg/inline', 'thumbs-up.svg'); ?></div>
