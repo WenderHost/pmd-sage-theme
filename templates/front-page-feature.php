@@ -1,8 +1,7 @@
 <div class="jumbotron withbackground">
-  <div class="jumbotron-overlay"></div>
   <div class="container">
     <div class="jumbotron-content">
-      <h3>Schedule your donation pick up:</h3>
+      <h3>Your donation pick up request made simple:</h3>
         <?= do_shortcode('[donationform nextpage="select-your-organization" form="0"]'); ?>
     </div>
   </div>

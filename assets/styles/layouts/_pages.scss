@@ -1,6 +1,6 @@
 /* Home
 ---------------------------------*/
-$jumbotron_h: 450px;
+$jumbotron_h: 500px;
 .home{
 	.jumbotron.withbackground{
 		/* Box-model */
@@ -10,55 +10,58 @@ $jumbotron_h: 450px;
 
 		/* Visual */
 		background-color: lighten($brand-primary,50%);
-		background-image: url(../images/moving-men.03.1920x650.jpg);
+		background-image: url(../images/moving-men.11.1920x500.jpg);
 		background-size: cover;
-	}
-
-	.jumbotron-overlay{
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		height: $jumbotron_h;
-		width: 100%;
-		padding: 10px 20px 20px 20px;
-		background-color: rgba(0,0,0,.25);
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1081c4+0,1081c4+100&0.1+0,0.75+100 */
-		background: -moz-linear-gradient(top,  rgba(16,129,196,0.1) 0%, rgba(16,129,196,0.75) 100%);
-		background: -webkit-linear-gradient(top,  rgba(16,129,196,0.1) 0%,rgba(16,129,196,0.75) 100%);
-		background: linear-gradient(to bottom,  rgba(16,129,196,0.1) 0%,rgba(16,129,196,0.75) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1081c4', endColorstr='#bf1081c4',GradientType=0 ); /* IE6-9 */
-
-
+		background-position: center;
 	}
 
 	.jumbotron-content{
 		/* Position */
-		margin: 88px auto 0 auto;
+		margin: 124px auto 0 auto;
 		z-index: 30;
 		position: relative;
 
 		/* Box-model */
-		max-width: 500px;
-		padding: 10px;
+		max-width: 840px;
+		padding: 16px 16px 20px 16px;
 
 		/* Typography */
 		text-align: center;
 
 		/* Visual */
-		background-color: rgba(255,255,255,.95);
+		/*background-color: rgba(255,255,255,.85);*/
+		background-color: rgba(0,0,0,.5);
 		border-radius: 3px;
-		box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
+		/*box-shadow: 0 0 10px 5px rgba(0,0,0,.3);*/
 
-		color: darken($brand-tertiary,35%);
+		color: #fff;
+		/*color: darken($brand-tertiary,35%);*/
+
+		h3{
+			margin-top: 0;
+			font-size: 44px;
+		}
 
 		p{
 			font-size: 1.25em;
 		}
+
+		.btn-lg{
+			padding: 12px 16px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		input[type="text"]{
+			background-color: lighten($brand-tertiary,10%);
+			border-color: $brand-primary;
+			color: $brand-primary;
+		}
 	}
 
 	.jumbotron form{
-		margin-top: 20px;
-		margin-bottom: 40px;
+		margin-top: 10px;
+		margin-bottom: 0px;
 	}
 
 	.jumbotron-title.logo{
