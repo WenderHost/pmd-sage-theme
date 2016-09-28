@@ -2,7 +2,7 @@
   <div class="container">
     <div class="jumbotron-content">
       <h3>Your donation pick up request made simple:</h3>
-        <?= do_shortcode('[donationform nextpage="select-your-organization" form="0"]'); ?>
+        <?= do_shortcode('[donationform nextpage="select-your-organization"]'); ?>
     </div>
   </div>
 </div>
