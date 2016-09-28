@@ -7,6 +7,7 @@ $donation-page-width: 600px;
 	margin-bottom: 40px;
 }
 
+.donate-now,
 .select-your-organization,
 .step-one,
 .step-two,
@@ -34,6 +35,10 @@ $donation-page-width: 600px;
 		clear: both;
 		max-width: 300px;
 
+	}
+
+	.form-inline .btn{
+		margin-top: 0;
 	}
 
 	.row.ads{
