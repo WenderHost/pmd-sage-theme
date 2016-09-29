@@ -17,6 +17,14 @@
 	margin-top: 20px;
 }
 
+/* body_class
+ -------------------------------------- */
+.hide-page-header{
+	.page-header{
+		display: none;
+	}
+}
+
 /* Jumbotrons
  -------------------------------------- */
 .ribbon{
