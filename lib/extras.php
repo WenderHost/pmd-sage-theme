@@ -14,6 +14,10 @@ function body_class($classes) {
       $classes[] = basename(get_permalink());
     }
   }
+  global $post;
+  if($body_class = get_post_meta( $post->ID, 'body_class', true )){
+    $classes[] = $body_class;
+  }
 
   // Add class if sidebar is active
   if (Setup\display_sidebar()) {
