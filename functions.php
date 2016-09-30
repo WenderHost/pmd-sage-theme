@@ -17,6 +17,7 @@ $sage_includes = [
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
   'lib/wp_bootstrap_navwalker.php', // Bootstrap markup for the main nav
+  'lib/shortcodes.php', // Theme specific shortcodes
 ];
 
 foreach ($sage_includes as $file) {
