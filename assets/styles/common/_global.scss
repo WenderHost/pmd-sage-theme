@@ -25,6 +25,34 @@
 	}
 }
 
+/* National Partners
+ -------------------------------------- */
+#national-partners{
+	text-align: center;
+	color: #fff;
+
+	.jumbotron{
+		padding-top: 30px;
+		padding-bottom: 10px;
+
+		&.brand-primary{
+			background-color: $brand-primary;
+		}
+	}
+	.row{
+		.col-md-12{
+			h3{
+				margin: 0 0 20px 0;
+			}
+		}
+		.col-md-4{
+			img{
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+}
 /* Jumbotrons
  -------------------------------------- */
 .ribbon{
@@ -63,6 +91,9 @@
 			background-color: #fff;
 			color: $brand-primary;
 		}
+	}
+	&.brand-tertiary{
+		background-color: $brand-tertiary;
 	}
 	&.jumbotron-cta{
 		.btn-lg{

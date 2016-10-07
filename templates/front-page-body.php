@@ -19,3 +19,17 @@
     </div>
 </div>
 <?php get_template_part('templates/content', 'partner-cta'); ?>
+<div class="container-fluid" id="national-partners">
+    <div class="jumbotron brand-primary nomargin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><h3>Our National Partners</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 center-block"><a href="http://www.thethriftshopper.com/" target="_blank"><img class="img-circle" src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.thriftshopper.300x300.png" /></a></div>
+                <div class="col-md-4 center-block"><a href="https://collegehunkshaulingjunk.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.collegehunkshauling.300x300.png" alt="" class="img-circle"></a></div>
+                <div class="col-md-4 center-block"><a href="https://www.svdpusa.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.society-st-vincent-de-paul.300x300.png" alt="" class="img-circle"></a></div>
+            </div>
+        </div>
+    </div>
+</div>
