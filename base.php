@@ -18,8 +18,11 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
       $full_width_pages = [];
+      $page_template = '';
+      if(is_page())
+        $page_template = basename( get_page_template() );
       global $post;
-      $container_class = ( is_single() || is_front_page() || in_array($post->post_name, $full_width_pages) ) ? 'container-fluid' : 'container';
+      $container_class = ( is_single() || is_front_page() || in_array($post->post_name, $full_width_pages) || 'template-page-with-partners-cta.php' == $page_template ) ? 'container-fluid' : 'container';
     ?>
     <div class="wrap <?= $container_class ?>" role="document">
       <div class="content row">

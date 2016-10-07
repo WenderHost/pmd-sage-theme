@@ -112,7 +112,11 @@ function assets()
 
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
-    if (is_front_page() || is_single()) {
+    $page_template = '';
+    if(is_page())
+      $page_template = basename( get_page_template() );
+
+    if (is_front_page() || is_single() || 'template-page-with-partners-cta.php' == $page_template) {
         wp_enqueue_script('donation/stats', Assets\asset_path('scripts/stats.js'), ['jquery'], null, true);
         wp_localize_script('donation/stats', 'wpvars', array('dataurl' => 'https://www.pickupmydonation.com/wp-content/plugins/donation-manager/stats.json'));
     }

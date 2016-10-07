@@ -35,7 +35,7 @@
             </div><!-- .row -->
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center"><a href="/partner-organizations/" class="btn btn-primary btn-lg">Become a Partner Organization <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>
+                    <p class="text-center"><a href="/<?php echo (is_page('partner-organizations'))? 'sign-up' : 'partner-organizations' ?>/" class="btn btn-primary btn-lg">Become a Partner Organization <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>
                 </div>
             </div>
         </div><!-- .container -->
