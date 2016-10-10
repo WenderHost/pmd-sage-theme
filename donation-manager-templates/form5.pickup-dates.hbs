@@ -4,8 +4,8 @@
 	<div class="row">
 		{{#each pickupdays}}
 		<div class="col-md-4">
-			<label for="yourname">Preferred Pickup Date {{@index}}<span class="required">*</span>:</label><br />
-			<input type="text" name="donor[pickupdate{{@index}}]" id="pickupdate{{@index}}" class="date" gldp-id="gldatepicker{{@index}}" value="{{value}}" />
+			<label>Preferred Pickup Date {{@index}}<span class="required">*</span>:</label><br />
+			<input type="text" name="donor[pickupdate{{@index}}]" id="pickupdate{{@index}}" class="date form-control" gldp-id="gldatepicker{{@index}}" value="{{value}}" />
 			<div style="position: relative;">
 				<div gldp-el="gldatepicker{{@index}}" style="width: 400px; height: 300px;"></div>
 			</div>

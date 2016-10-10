@@ -6,7 +6,7 @@
     </div>
   </div>
 </div>
-<div class="jumbotron ribbon">
+<div class="jumbotron ribbon" id="donors-like-you">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
