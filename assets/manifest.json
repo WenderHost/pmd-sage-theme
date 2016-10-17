@@ -3,7 +3,8 @@
     "main.js": {
       "files": [
         "scripts/main.js",
-        "bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"
+        "bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
+        "scripts/google.adroll.js"
       ],
       "main": true
     },
