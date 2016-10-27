@@ -30,6 +30,6 @@
     }
   },
   "config": {
-    "devUrl": "http://beta.pickupmydonation.dev"
+    "devUrl": "http://pickupmydonation.dev"
   }
 }
