@@ -32,6 +32,18 @@
 		}
 	}
 }
+@media only screen and (max-width: 700px){
+	.single{
+		article header,
+		article footer,
+		.byline,
+		.entry-content{
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+	}
+}
 
 .byline{
 	/* Positioning */
@@ -61,6 +73,7 @@
 		margin-bottom: 40px;
 		border-bottom: 1px solid #eee;
 		font-size: 14px;
+		clear: both;
 	}
 
 	.page-header{
@@ -85,6 +98,8 @@
 .feature-thumbnail{
 	width: 200px;
 	height: 200px;
+	float: right;
+	margin: 0 0 20px 20px;
 }
 
 .single main.main{
