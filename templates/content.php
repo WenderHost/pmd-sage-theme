@@ -4,7 +4,7 @@
   </header>
   <?php
   if (has_post_thumbnail()) {
-    the_post_thumbnail('feature-thumbnail', ['class' => 'alignright feature-thumbnail']);
+    the_post_thumbnail('feature-thumbnail', ['class' => 'feature-thumbnail']);
   }
   ?>
   <div class="entry-summary lead">

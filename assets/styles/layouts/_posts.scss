@@ -42,6 +42,14 @@
 			margin: 0 auto;
 			padding: 0 20px;
 		}
+
+		.feature.full-width{
+			height: auto;
+		}
+
+		.feature.page-width{
+			width: 100%;
+		}
 	}
 }
 
@@ -96,10 +104,15 @@
 }
 
 .feature-thumbnail{
+	/*
 	width: 200px;
 	height: 200px;
 	float: right;
 	margin: 0 0 20px 20px;
+	*/
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 .single main.main{

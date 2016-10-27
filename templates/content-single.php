@@ -19,7 +19,9 @@
             $feature_image_h = ' height: ' . $feature_image_meta['height'] . 'px;';
         }
 
-        $feature_format = '<div class="feature %1$s" style="background: #eee url(%2$s) no-repeat center; background-size: cover;%3$s"></div>';
+        $feature_format = '<div class="feature hidden-sm hidden-xs %1$s" style="background: #eee url(%2$s) no-repeat center; background-size: cover;%3$s"></div>';
+        echo sprintf($feature_format, $feature_css_class, $feature_image_url, $feature_image_h);
+        $feature_format = '<div class="feature hidden-lg hidden-md %1$s"><img src="%2$s" style="height: auto; width: 100%%;"/></div>';
         echo sprintf($feature_format, $feature_css_class, $feature_image_url, $feature_image_h);
     }
     ?>
