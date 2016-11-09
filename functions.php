@@ -18,6 +18,7 @@ $sage_includes = [
   'lib/customizer.php', // Theme customizer
   'lib/wp_bootstrap_navwalker.php', // Bootstrap markup for the main nav
   'lib/shortcodes.php', // Theme specific shortcodes
+  'lib/jquery-cdn.php', // Adjusting jQuery local fallback
 ];
 
 foreach ($sage_includes as $file) {
