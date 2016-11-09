@@ -1,0 +1,6 @@
+.btn{
+  &.disabled{
+    background-color: darken($brand-tertiary,20%);
+    border-color: darken($brand-tertiary,30%);
+  }
+}
