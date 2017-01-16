@@ -1,0 +1,154 @@
+.pricing-table{
+  margin-bottom: 40px;
+  width: 100%;
+
+	thead{
+		th{
+			font-weight: bold;
+			font-family: "Francois One", sans-serif;
+      border-bottom: 1px solid lighten($brand-primary,50%);
+      background-color: lighten($brand-primary,56%);
+
+      h3{
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+			&:first-child{
+				font-size: 3rem;
+			}
+
+			&:nth-child(n + 2){
+				/*word-spacing: 7rem;*/
+			}
+		}
+	}
+	tr{
+		th, td{
+			text-align: left;
+      padding: 8px 12px;
+
+			&:nth-child(n+2){
+				text-align: center;
+			}
+		}
+    td{
+      &:nth-child(n+2){
+        color: $brand-secondary;
+        font-size: 2rem;
+      }
+    }
+	}
+  tbody{
+    tr{
+
+      &:nth-child(4n){
+        background-color: lighten($brand-primary,56%);
+      }
+
+      td{
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+
+        .alert{
+          background-color: lighten(#000,96%);
+          font-size: .8em;
+          font-weight: normal;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  tfoot{
+    tr:first-child td{
+      border-top: 1px solid lighten($brand-primary,50%);
+
+      h3, h4{
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+}
+
+form.pricing-table{
+  color: #000;
+
+  label{
+
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    input{
+      margin-right: 4px;
+    }
+    .note{
+      margin-left: 20px;
+    }
+  }
+  .note{
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  select{
+    color: #000;
+    font-size: 1.4rem;
+  }
+
+  & + div.alert-info{
+    background-color: lighten($brand-primary,56%);
+    border: none;
+
+    p{
+      margin-bottom: 20px;
+
+      & + ul{
+        margin-top: -10px;
+      }
+    }
+  }
+}
+
+.visible-xs {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .visible-xs {
+    display: table-row;
+
+
+  }
+
+  .pricing-table{
+    tbody{
+      tr{
+        &:nth-child(4n){
+          background-color: #fff;
+        }
+        &:nth-child(odd) td{
+          color: #333;
+        }
+        &:nth-child(even){
+          border-left: 1px solid lighten($brand-primary, 30%);
+          td{
+            border-style: solid;
+            border-width: 1px 1px 1px 0;
+            border-color: lighten($brand-primary, 30%);
+            background-color: lighten($brand-primary, 56%);
+          }
+        }
+
+        td{
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  td:first-child,
+  th:first-child {
+    display: none;
+  }
+}
