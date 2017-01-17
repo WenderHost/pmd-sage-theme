@@ -26,9 +26,9 @@
                 <div class="col-md-12"><h3>Our National Partners</h3></div>
             </div>
             <div class="row">
-                <div class="col-md-2 col-md-offset-3"><a href="http://www.thethriftshopper.com/" target="_blank"><img class="img-circle" src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.thriftshopper.300x300.png" /></a></div>
-                <div class="col-md-2"><a href="https://collegehunkshaulingjunk.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.collegehunkshauling.300x300.png" alt="" class="img-circle"></a></div>
-                <div class="col-md-2"><a href="https://www.svdpusa.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.society-st-vincent-de-paul.300x300.png" alt="" class="img-circle"></a></div>
+                <div class="col-md-2 col-md-offset-3"><a href="http://www.thethriftshopper.com/" target="_blank" rel="nofolow"><img class="img-circle" src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.thriftshopper.300x300.png" /></a></div>
+                <div class="col-md-2"><a href="https://collegehunkshaulingjunk.com/" target="_blank" rel="nofolow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.collegehunkshauling.300x300.png" alt="" class="img-circle"></a></div>
+                <div class="col-md-2"><a href="https://www.svdpusa.org/" target="_blank" rel="nofolow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/partner.society-st-vincent-de-paul.300x300.png" alt="" class="img-circle"></a></div>
             </div>
             <div class="row">
                 <div class="col-md-12"><h3 style="margin-top: 20px;"><a href="/national-partners/" class="btn btn-default">Learn more about our National Partners</a></h3></div>
