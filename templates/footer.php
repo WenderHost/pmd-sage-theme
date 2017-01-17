@@ -10,7 +10,7 @@
                     wp_nav_menu(['theme_location' => 'footer_navigation']);
                 }
                 ?></div>
-                <div class="col-lg-4 copyright">&copy; <?php echo date('Y') ?> <?php bloginfo('title'); ?>. All rights reserved.</div>
+                <div class="col-lg-4 copyright">&copy; 2012 - <?php echo date('Y') ?> <?php bloginfo('title'); ?>. All rights reserved.</div>
             </div>
         </div>
     </div><!-- .jumbotron.ribbon -->
