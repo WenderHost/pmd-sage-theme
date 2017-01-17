@@ -1,4 +1,6 @@
 <?php
+global $wpdb;
+
 if (isset($_REQUEST['state']) && ! empty($_REQUEST['state'])) {
     $sql = $wpdb->prepare('SELECT DISTINCT(StateName) FROM zipcodes WHERE StateAbbr=%s', $_REQUEST['state']);
     $statename = $wpdb->get_var($sql);
