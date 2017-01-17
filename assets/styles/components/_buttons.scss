@@ -3,4 +3,8 @@
     background-color: darken($brand-tertiary,20%);
     border-color: darken($brand-tertiary,30%);
   }
+
+  &.btn-default{
+    color: $brand-primary;
+  }
 }
