@@ -41,7 +41,12 @@ $donation-page-width: 600px;
 		margin-top: 0;
 	}
 
+	hr:last-of-type{
+		display: none;
+	}
+
 	.row.ads{
+		margin-top: 30px;
 		margin-bottom: 30px;
 
 		.col-xs-4:only-of-type{
@@ -69,22 +74,4 @@ $donation-page-width: 600px;
 	position: absolute;
 	right: 28px;
 	top: -16px;
-}
-.row.organization{
-	.btn-lg{
-		font-size: .9em;
-	}
-
-	&:last-of-type + hr{
-		display: none;
-	}
-}
-.row.organization.priority{
-	/*border-top: 1px solid #eee;
-	padding-top: 30px;*/
-
-
-	.btn-lg{
-		font-size: 1.1em;
-	}
 }
