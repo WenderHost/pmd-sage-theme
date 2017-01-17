@@ -1,5 +1,5 @@
 <?php
-global $wpdb;
+global $wpdb, $post;
 
 if (isset($_REQUEST['state']) && ! empty($_REQUEST['state'])) {
     $sql = $wpdb->prepare('SELECT DISTINCT(StateName) FROM zipcodes WHERE StateAbbr=%s', $_REQUEST['state']);
@@ -18,7 +18,9 @@ if (! isset($_REQUEST['state']) || empty($_REQUEST['state'])) {
 
     $permalink = get_permalink($post->ID);
 
-    $search_by_zip = get_post_meta($post->ID, 'search_by_zip', true);
+    $search_by_zip = false;
+    if( 'zipcodes' == $post->post_name )
+      $search_by_zip = true;
     $zip_query = ( $search_by_zip && ( true == settype($search_by_zip, 'bool') ) ) ? '&zipcodes=true' : '';
 
   if ($states) {
