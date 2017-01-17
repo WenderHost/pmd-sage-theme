@@ -38,6 +38,15 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    // Runs on template-tabs.php
+    'page_template_template_tabs': {
+      init: function(){
+        $('.sub-page-tabs .nav-tabs a').click(function(e){
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      }
     }
   };
 

@@ -4,6 +4,7 @@
       "files": [
         "scripts/main.js",
         "bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
+        "bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
         "scripts/google.adroll.js"
       ],
       "main": true
