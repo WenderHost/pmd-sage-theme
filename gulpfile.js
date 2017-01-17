@@ -282,6 +282,7 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // `gulp clean-package` - Deletes the packaged theme.
 gulp.task('clean-package', function(){
   rmdir('./package',function(error){});
+  console.log('`/package/` directory deleted.');
 });
 
 // ### Update Package Meta
