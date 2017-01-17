@@ -40,7 +40,7 @@ function load_content( $atts ){
 
     ob_start();
     include( $file );
-    $file_contents = ob_get_clean();\
+    $file_contents = ob_get_clean();
     return $file_contents;
 }
 add_shortcode( 'load', __NAMESPACE__ . '\\load_content' );
