@@ -145,10 +145,12 @@ form.pricing-table{
         }
       }
     }
+
+    td:first-child,
+    th:first-child {
+      display: none;
+    }
   }
 
-  td:first-child,
-  th:first-child {
-    display: none;
-  }
+
 }
