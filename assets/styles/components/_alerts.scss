@@ -1,4 +1,8 @@
 /* Alerts */
 .alert{
 	text-align: left;
+
+  & > p{
+    margin-bottom: inherit;
+  }
 }
