@@ -303,7 +303,7 @@ gulp.task('update-package-meta', function(){
 // See: http://www.browsersync.io
 gulp.task('watch', function() {
   browserSync.init({
-    files: ['{lib,templates}/**/*.php', '*.php'],
+    files: ['{lib,templates}/**/*.php', '*.php','donation-manager-templates/*.hbs'],
     proxy: config.devUrl,
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
