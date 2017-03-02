@@ -42,7 +42,7 @@ $donation-page-width: 600px;
 	}
 
 	.row.ads{
-		margin-top: 15px;
+		margin-top: 30px;
 		margin-bottom: 30px;
 
 		.col-xs-4:only-of-type{
@@ -57,6 +57,10 @@ $donation-page-width: 600px;
 
 	.row.providers{
 		margin-top: 20px;
+
+		p{
+			margin-bottom: 0;
+		}
 	}
 }
 
