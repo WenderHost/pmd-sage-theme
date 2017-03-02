@@ -42,7 +42,7 @@ $donation-page-width: 600px;
 	}
 
 	.row.ads{
-		margin-top: 30px;
+		margin-top: 15px;
 		margin-bottom: 30px;
 
 		.col-xs-4:only-of-type{
@@ -54,12 +54,30 @@ $donation-page-width: 600px;
 			margin-left: 17%;
 		}
 	}
+
+	.row.providers{
+		margin-top: 20px;
+	}
 }
 
 .step-two{
 	.page-header{
 		border: none;
 		margin-bottom: 0;
+	}
+}
+
+span.pick-up-provider{
+	&:after{
+		content: '\2C';
+		margin-right: 8px;
+	}
+
+	&:last-of-type{
+		&:after{
+			content: none;
+			margin-right: 0;
+		}
 	}
 }
 
