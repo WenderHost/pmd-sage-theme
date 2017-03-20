@@ -1,7 +1,7 @@
 <div class="jumbotron withbackground">
   <div class="container">
     <div class="jumbotron-content">
-      <h3>Your donation pick up request made simple:</h3>
+      <h3>Request a donation pick up now:</h3>
         <?= do_shortcode('[donationform nextpage="select-your-organization"]'); ?>
     </div>
   </div>
