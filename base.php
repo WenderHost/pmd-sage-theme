@@ -11,7 +11,7 @@ use Roots\Sage\Wrapper;
   <body <?php body_class(); ?>>
     <!--[if IE]>
       <div class="alert alert-warning">
-        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
     <![endif]-->
     <?php
@@ -22,7 +22,13 @@ use Roots\Sage\Wrapper;
       if(is_page())
         $page_template = basename( get_page_template() );
       global $post;
-      $container_class = ( is_single() || is_front_page() || in_array($post->post_name, $full_width_pages) || 'template-page-with-partners-cta.php' == $page_template ) ? 'container-fluid' : 'container';
+      $container_class = (
+        is_single()
+        || is_front_page()
+        || in_array($post->post_name, $full_width_pages)
+        || 'template-page-with-partners-cta.php' == $page_template
+        || 'template-tabs-with-partners-cta.php' == $page_template )
+      ? 'container-fluid' : 'container';
     ?>
     <div class="wrap <?= $container_class ?>" role="document">
       <div class="content row">

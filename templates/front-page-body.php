@@ -18,7 +18,6 @@
         </div>
     </div>
 </div>
-<?php get_template_part('templates/content', 'partner-cta'); ?>
 <div class="container-fluid" id="national-partners">
     <div class="jumbotron brand-primary nomargin">
         <div class="container">
