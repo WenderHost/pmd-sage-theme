@@ -27,7 +27,8 @@ use Roots\Sage\Wrapper;
         || is_front_page()
         || in_array($post->post_name, $full_width_pages)
         || 'template-page-with-partners-cta.php' == $page_template
-        || 'template-tabs-with-partners-cta.php' == $page_template )
+        || 'template-tabs-with-partners-cta.php' == $page_template
+        || 'template-city-page.php' == $page_template )
       ? 'container-fluid' : 'container';
     ?>
     <div class="wrap <?= $container_class ?>" role="document">
