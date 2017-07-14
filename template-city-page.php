@@ -19,7 +19,7 @@ while (have_posts()) :
                     <h3>Featured Non Profit Partner</h3>
                 <?php
                 $nonprofit_website = get_post_meta( $nonprofit_id, 'website', true );
-                $nonprofit_format = ( ! empty( $nonprofit_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '$s';
+                $nonprofit_format = ( ! empty( $nonprofit_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '%1$s';
 
                 if( $nonprofit_thumbnail = get_the_post_thumbnail( $nonprofit_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
                     echo sprintf( $nonprofit_format, $nonprofit_thumbnail, $nonprofit_website );
@@ -31,15 +31,15 @@ while (have_posts()) :
 
             if( $priority_id = get_post_meta( $post->ID, 'priority_partner', true ) ){
                 $priority_website = get_post_meta( $priority_id, 'website', true );
-                $priority_format = ( ! empty( $priority_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '$s';
+                $priority_format = ( ! empty( $priority_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '%1$s';
                 ?>
                 <div class="widget partner">
                     <h3>Priority Partner</h3>
                 <?php
                 if( $priority_thumbnail = get_the_post_thumbnail( $priority_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
-                    echo sprintf( $priority_format, $priority_thumbnail, $priority_website );;
+                    echo sprintf( $priority_format, $priority_thumbnail, $priority_website );
                 ?>
-                    <p><?= sprintf( $priority_format, get_the_title( $priority_id ), $priority_website );; ?></p>
+                    <p><?= sprintf( $priority_format, get_the_title( $priority_id ), $priority_website ); ?></p>
                 </div>
             <?php
             }
