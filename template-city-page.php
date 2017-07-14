@@ -13,30 +13,33 @@ while (have_posts()) :
         </div>
         <div class="col-md-4 sidebar">
             <?php
-            if( $non_profit_id = get_post_meta( $post->ID, 'non_profit_partner', true ) ){
+            if( $nonprofit_id = get_post_meta( $post->ID, 'non_profit_partner', true ) ){
                 ?>
                 <div class="widget partner">
                     <h3>Featured Non Profit Partner</h3>
                 <?php
-                if( $thumbnail = get_the_post_thumbnail( $non_profit_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) ){
-                    echo $thumbnail;
-                }
+                $nonprofit_website = get_post_meta( $nonprofit_id, 'website', true );
+                $nonprofit_format = ( ! empty( $nonprofit_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '$s';
+
+                if( $nonprofit_thumbnail = get_the_post_thumbnail( $nonprofit_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
+                    echo sprintf( $nonprofit_format, $nonprofit_thumbnail, $nonprofit_website );
                 ?>
-                    <p><?php echo get_the_title( $non_profit_id ); ?></p>
+                    <p><?= sprintf( $nonprofit_format, get_the_title( $nonprofit_id ), $nonprofit_website ); ?></p>
                 </div>
             <?php
             }
 
             if( $priority_id = get_post_meta( $post->ID, 'priority_partner', true ) ){
+                $priority_website = get_post_meta( $priority_id, 'website', true );
+                $priority_format = ( ! empty( $priority_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '$s';
                 ?>
                 <div class="widget partner">
                     <h3>Priority Partner</h3>
                 <?php
-                if( $thumbnail = get_the_post_thumbnail( $priority_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) ){
-                    echo $thumbnail;
-                }
+                if( $priority_thumbnail = get_the_post_thumbnail( $priority_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
+                    echo sprintf( $priority_format, $priority_thumbnail, $priority_website );;
                 ?>
-                    <p><?php echo get_the_title( $priority_id ); ?></p>
+                    <p><?= sprintf( $priority_format, get_the_title( $priority_id ), $priority_website );; ?></p>
                 </div>
             <?php
             }
