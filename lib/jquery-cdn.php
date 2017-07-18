@@ -25,6 +25,6 @@ function register_jquery() {
         wp_enqueue_script( 'jquery' );
     }
 
-    wp_add_inline_script( 'jquery', '(window.jQuery && jQuery.noConflict()) || document.write("<script src=\"' . \includes_url('/js/jquery/jquery.js') . '\"><\/script>")' );
+    wp_add_inline_script( 'jquery', '(window.jQuery && jQuery.noConflict()) || document.write(\'<script src="' . \includes_url('/js/jquery/jquery.js/') . '"></script>\')' );
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\register_jquery', 100);
