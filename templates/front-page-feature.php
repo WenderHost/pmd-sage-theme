@@ -1,5 +1,8 @@
 <div class="jumbotron withbackground">
   <div class="container">
+    <div class="call-to-action">
+      <a href="/partner-benefits/" class="btn btn-secondary">Are you a non-profit? <?php get_template_part('dist/svg/inline', 'pointing-hand.svg'); ?></a>
+    </div>
     <div class="jumbotron-content">
       <h3>Request a donation pick up now:</h3>
         <?= do_shortcode('[donationform nextpage="select-your-organization"]'); ?>
