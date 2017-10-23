@@ -1,6 +1,6 @@
 /* Home
 ---------------------------------*/
-$jumbotron_h: 500px;
+$jumbotron_h: 470px;
 .home{
 	.jumbotron.withbackground{
 		/* Box-model */
@@ -15,7 +15,9 @@ $jumbotron_h: 500px;
 		background-position: center;
 
 		.call-to-action{
+			margin-top: -24px;
 			text-align: right;
+
 
 			a{
 				color: #fff;
@@ -44,13 +46,14 @@ $jumbotron_h: 500px;
 			and (max-width : 760px) {
 				/* Styles */
 				text-align: center;
+				margin-top: -10px;
 			}
 		}
 	}
 
 	.jumbotron-content{
 		/* Position */
-		margin: 80px auto 0 auto;
+		margin: 104px auto 0 auto;
 		z-index: 30;
 		position: relative;
 

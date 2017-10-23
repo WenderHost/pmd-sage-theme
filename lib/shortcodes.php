@@ -6,7 +6,7 @@ function theme_logo( $atts ){
     $args = \shortcode_atts( [
             'width' => 400,
             'class' => 'aligncenter',
-            'style' => '',
+            'style' => 'max-width: 100%',
         ], $atts );
 
     $logo = \get_stylesheet_directory_uri() . '/dist/images/logo.1505x180.png';
