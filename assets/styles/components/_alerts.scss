@@ -5,4 +5,8 @@
   & > p{
     margin-bottom: inherit;
   }
+
+  &.alert-info{
+    background-color: lighten($brand-primary,57%);
+  }
 }
