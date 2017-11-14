@@ -1,17 +1,19 @@
 <?php
 $features = [
   'scheduling' => [
-    'desc' => 'Donation Scheduling on your website',
+    'title' => 'Donation Scheduling on your website',
+    'desc' => 'Your donors will love how quick and easy we make it to donate to your organization',
     'content' => '&#10004;',
     'plan' => ['shared','exclusive']
   ],
   'brand' => [
-    'desc' => 'PickUpMyDonation.com Brand Use',
+    'title' => 'PickUpMyDonation.com Brand Use',
     'content' => '&#10004;',
     'plan' => ['shared','exclusive']
   ],
   'referrals' => [
-    'desc' => 'Donation Referrals',
+    'title' => 'Donation Referrals',
+    'desc' => 'Network Members share referrals with other providers, Exclusive Providers are the sole recipients of donations for their market',
     'content' => [
       'shared' => 'Shared',
       'exclusive' => 'Exclusive'
@@ -19,12 +21,19 @@ $features = [
     'plan' => ['shared','exclusive']
   ],
   'report' => [
-    'desc' => 'Monthly Donor Report',
+    'title' => 'Monthly Donor Report',
+    'desc' => 'See how many donations you received and their estimated value',
+    'content' => '&#10004;',
+    'plan' => ['shared','exclusive']
+  ],
+  'donor-csv' => [
+    'title' => 'Monthly Donor CSV',
+    'desc' => 'All details for each donation you receive ready to import into your favorite spreadsheet',
     'content' => '&#10004;',
     'plan' => ['exclusive']
   ],
   'advertising' => [
-    'desc' => 'Inclusion in National Advertising',
+    'title' => 'Inclusion in National Advertising',
     'content' => '&#10004;',
     'plan' => ['exclusive']
   ],
@@ -67,10 +76,10 @@ $features = [
         ?>
       <tr class="visible-xs" aria-hidden="true">
         <td>&nbsp;</td>
-        <td colspan="2"><?= $feature['desc'] ?></td>
+        <td colspan="2"><?= $feature['title'] ?><?php if( isset( $feature['desc'] ) && ! empty( $feature['desc'] ) ){ ?><span><?= $feature['desc'] ?></span><?php } ?></td>
       </tr>
       <tr>
-        <td><?= $feature['desc'] ?></td>
+        <td><?= $feature['title'] ?><?php if( isset( $feature['desc'] ) && ! empty( $feature['desc'] ) ){ ?><span><?= $feature['desc'] ?></span><?php } ?></td>
         <td><?= $shared_content ?></td>
         <td><?= $exclusive_content ?></td>
       </tr>
