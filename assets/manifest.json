@@ -31,6 +31,6 @@
     }
   },
   "config": {
-    "devUrl": "http://pickupmydonation.dev"
+    "devUrl": "http://pickupmydonation.local"
   }
 }
