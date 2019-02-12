@@ -1,3 +1,19 @@
+/* Gravity Forms
+------------------------*/
+.gform_wrapper{
+	.gform_button{
+		background-color: $brand-primary;
+		color: #fff;
+		padding: 6px 20px;
+		border-radius: 3px;
+		border: none;
+
+		&:hover{
+			background-color: $brand-secondary;
+		}
+	}
+}
+
 /* Donation Manager
 ------------------------*/
 /* Donation Manager pages
