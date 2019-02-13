@@ -177,9 +177,17 @@ $jumbotron_h: 470px;
 ---------------------------------*/
 .email-preferences{
 	.page-header,
-	.gform_wrapper{
+	.gform_wrapper,
+	.gform_confirmation_message{
 		max-width: 600px;
 		margin: 0 auto;
+	}
+
+	.gform_confirmation_message{
+		background-color: #c8e6f7;
+		padding: 20px;
+		margin-top: 20px;
+		border-radius: 3px;
 	}
 }
 
