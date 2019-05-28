@@ -13,20 +13,20 @@ while (have_posts()) :
         </div>
         <div class="col-md-4 sidebar">
             <?php
-            if( $nonprofit_id = get_post_meta( $post->ID, 'non_profit_partner', true ) ){
-                ?>
-                <div class="widget partner">
-                    <h3>Featured Non Profit Partner</h3>
-                <?php
-                $nonprofit_website = get_post_meta( $nonprofit_id, 'website', true );
-                $nonprofit_format = ( ! empty( $nonprofit_website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '%1$s';
+            $nonprofit_partners = get_post_meta( $post->ID, 'non_profit_partner', true );
 
-                if( $nonprofit_thumbnail = get_the_post_thumbnail( $nonprofit_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
-                    echo sprintf( $nonprofit_format, $nonprofit_thumbnail, $nonprofit_website );
-                ?>
-                    <p><?= sprintf( $nonprofit_format, get_the_title( $nonprofit_id ), $nonprofit_website ); ?></p>
-                </div>
-            <?php
+            if( is_array( $nonprofit_partners ) && 0 < count( $nonprofit_partners ) ){
+              echo '<div class="widget partner">';
+              $partner_text = ( 1 < count( $nonprofit_partners ) )? 'Partners' : 'Partner' ;
+              echo '<h3>Featured Non Profit ' . $partner_text . '</h3>';
+              foreach( $nonprofit_partners as $nonprofit_id ){
+                $website = ( $url = get_post_meta( $nonprofit_id, 'website', true ) )? $url : '' ;
+                $format = ( ! empty( $website ) )? '<a href="%2$s" target="_blank">%1$s</a>' : '%1$s';
+                if( $thumbnail = get_the_post_thumbnail( $nonprofit_id, 'large', ['style'=>'max-width: 100%; height: auto;'] ) )
+                    echo sprintf( $format, $thumbnail, $website );
+                echo '<p>' . sprintf( $format, get_the_title( $nonprofit_id ), $website ) . '</p>';
+              }
+              echo '</div>';
             }
 
             if( $priority_id = get_post_meta( $post->ID, 'priority_partner', true ) ){
