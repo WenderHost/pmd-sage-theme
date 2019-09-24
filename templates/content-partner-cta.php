@@ -26,8 +26,8 @@
                 </div><!-- .col-md-4 -->
                 <div class="col-md-4">
                     <div class="stat circle">
-                        <div class="stat-inner">???
-                            <div class="caption">How many<br />did you miss?</div>
+                        <div class="stat-inner"><a href="/donors-in-your-area/" style="color: #fff" title="Find out how many donations you've missed.">???</a>
+                            <div class="caption"><a href="/donors-in-your-area/" style="color: #fff" title="Find out how many donations you've missed.">How many<br />did you miss?</a></div>
                         </div>
 
                     </div>
