@@ -64,4 +64,4 @@ function seo_pages_where($where, &$wp_query){
   }
   return $where;
 }
-add_filter('posts_where', __NAMESPACE__ . '\\seo_pages_where', 10, 2);
+//add_filter('posts_where', __NAMESPACE__ . '\\seo_pages_where', 10, 2);
