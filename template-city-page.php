@@ -14,11 +14,12 @@ while (have_posts()) :
             <?php
             the_content();
             if( is_array( $nonprofit_partners ) && 0 < count( $nonprofit_partners ) ){
-                echo '<h3>Buying or Selling in ' . get_post_meta( $post->ID, 'city', true ) . '</h3>';
                 foreach( $nonprofit_partners as $nonprofit_id ){
                     $desc = get_post_meta( $nonprofit_id, 'realtor_description', true );
-                    if( ! empty( $desc ) )
+                    if( ! empty( $desc ) ){
+                        echo '<h3>Buying or Selling in ' . get_post_meta( $post->ID, 'city', true ) . '</h3>';
                         echo $desc;
+                    }
                 }
             }
             ?>
