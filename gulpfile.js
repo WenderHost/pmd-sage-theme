@@ -174,6 +174,23 @@ var writeToManifest = function(directory) {
 // `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
 // By default this task will only log a warning if a precompiler error is
 // raised. If the `--production` flag is set: this task will fail outright.
+gulp.task('styles', gulp.series('wiredep', () => {
+  var merged = merge();
+  manifest.forEachDependency('css', function (dep) {
+    var cssTasksInstance = cssTasks(dep.name);
+    if (!enabled.failStyleTask) {
+      cssTasksInstance.on('error', function (err) {
+        console.error(err.message);
+        this.emit('end');
+      });
+    }
+    merged.add(gulp.src(dep.globs, { base: 'styles' })
+      .pipe(cssTasksInstance));
+  });
+  return merged
+    .pipe(writeToManifest('styles'));
+}));
+/*
 gulp.task('styles', ['wiredep'], function() {
   var merged = merge();
   manifest.forEachDependency('css', function(dep) {
@@ -190,10 +207,23 @@ gulp.task('styles', ['wiredep'], function() {
   return merged
     .pipe(writeToManifest('styles'));
 });
+*/
 
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
 // and project JS.
+gulp.task('scripts', gulp.series('jshint',() => {
+  var merged = merge();
+  manifest.forEachDependency('js', function (dep) {
+    merged.add(
+      gulp.src(dep.globs, { base: 'scripts' })
+        .pipe(jsTasks(dep.name))
+    );
+  });
+  return merged
+    .pipe(writeToManifest('scripts'));
+}));
+/*
 gulp.task('scripts', ['jshint'], function() {
   var merged = merge();
   manifest.forEachDependency('js', function(dep) {
@@ -205,6 +235,7 @@ gulp.task('scripts', ['jshint'], function() {
   return merged
     .pipe(writeToManifest('scripts'));
 });
+*/
 
 // ### Fonts
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
@@ -350,6 +381,12 @@ gulp.task('zip-theme',function(){
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
+gulp.task('default', gulp.series('clean', () => {
+  gulp.start('build');
+}));
+/*
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
+*/
+
