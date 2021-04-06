@@ -142,3 +142,11 @@ Keep track of development and community news.
 * Read and subscribe to the [Roots Blog](https://roots.io/blog/)
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
 * Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+
+# Changelog
+
+## 8.5.0
+
+* Adding ACF Organization Options.
+* Adding right margin to footer menu list items.
+* Removing "Shared Market" option from `content-pricing-tables.php`.
