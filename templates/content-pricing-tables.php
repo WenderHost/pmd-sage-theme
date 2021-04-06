@@ -49,7 +49,7 @@ $features = [
     <thead>
       <tr>
         <th>Features &amp; Benefits</th>
-        <th><h3>Join the Network</h3></th>
+        <!--<th><h3>Join the Network</h3></th>-->
         <th><h3>Exclusive Partnership</h3></th>
       </tr>
     </thead>
@@ -80,7 +80,7 @@ $features = [
       </tr>
       <tr>
         <td><?= $feature['title'] ?><?php if( isset( $feature['desc'] ) && ! empty( $feature['desc'] ) ){ ?><span><?= $feature['desc'] ?></span><?php } ?></td>
-        <td><?= $shared_content ?></td>
+        <!--<td><?= $shared_content ?></td>-->
         <td><?= $exclusive_content ?></td>
       </tr>
         <?php
@@ -90,27 +90,29 @@ $features = [
       <tfoot>
         <tr>
           <td>&nbsp;</td>
-          <td><h3>$29/month</h3></td>
+          <!--<td><h3>$29/month</h3></td>-->
           <td>
-              <h4>Starts at $99/month*</h4>
-              <div class="form-group">
+              <h4>$99/month</h4>
+              <!--<div class="form-group">
                 <select name="market-size" class="form-control" style="max-width: 200px; margin: 0 auto;">
                   <option value="">Select your market size:</option>
                   <option value="exclusivesmallmarket_2_1month_99">Metro Population less than 100,000 &ndash; $99/month</option>
                   <option value="exclusivemediummarket_3_1month_199">Metro Population between 100K - 999,999 &ndash; $199/month</option>
                   <option value="exclusivekeymarket_4_1month_249">Metro Population over 1 million &ndash; $249/month</option>
                 </select>
-              </div>
+              </div>-->
+              <input type="hidden" name="market-size" value="exclusivesmallmarket_2_1month_99" />
           </td>
         </tr>
         <tr>
           <td>&nbsp;</td>
-          <td><a class="btn btn-primary btn-lg" href="/join-our-network/">Sign Up</a></td>
+          <!--<td><a class="btn btn-primary btn-lg" href="/join-our-network/">Sign Up</a></td>-->
           <td><input type="submit" value="Sign Up" class="btn btn-primary btn-lg" /></td>
         </tr>
       </tfoot>
   </table>
 </form>
+<!--
 <hr>
   <p><sup>*</sup> Your metro area's population determines your market size:</p>
   <ul>
@@ -118,3 +120,4 @@ $features = [
     <li>Medium Market ($199/month) &ndash; Metro Population between 100,000 - 999,999</li>
     <li>Key Market ($249/month) &ndash; Metro Population over 1 million</li>
   </ul>
+-->
