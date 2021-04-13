@@ -101,7 +101,7 @@ $features = [
                   <option value="exclusivekeymarket_4_1month_249">Metro Population over 1 million &ndash; $249/month</option>
                 </select>
               </div>-->
-              <input type="hidden" name="market-size" value="exclusivesmallmarket_2_1month_99" />
+              <input type="hidden" name="market-size" value="exclusive-market" />
           </td>
         </tr>
         <tr>
