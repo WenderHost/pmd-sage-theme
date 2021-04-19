@@ -145,6 +145,11 @@ Keep track of development and community news.
 
 # Changelog
 
+## 8.5.1
+
+* Adding contact form to `template-tabs-with-partners-cta.php`.
+* Adding CSS/JS for `template-tabs-with-partners-cta.php` video thumbnail.
+
 ## 8.5.0
 
 * Adding ACF Organization Options.
